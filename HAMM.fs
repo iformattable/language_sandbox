@@ -1,8 +1,8 @@
 #light
 
 let rec dist h = function
-  | (a::b1s,b::b2s) when a = b -> dist h (b1s,b2s)
-  | (_::b1s,_::b2s)            -> dist (h+1) (b1s,b2s)
+  | (a::s1,b::s2) when a = b -> dist h     (s1,s2)
+  | (_::s1,_::s2)            -> dist (h+1) (s1,s2)
   | _ -> printfn "%d" h
 
 let [|_;s1;s2|] = System.Environment.GetCommandLineArgs()
