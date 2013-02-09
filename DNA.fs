@@ -7,5 +7,5 @@ let rec count a c g t = function
   | 'T'::nbs -> count a c g (t+1) nbs
   | _ -> printfn "%d %d %d %d" a c g t
 
-let (_::s::_) = System.Environment.GetCommandLineArgs() |> Seq.toList
+let [|_;s|] = System.Environment.GetCommandLineArgs() 
 count 0 0 0 0 (s.ToCharArray() |> Seq.toList)

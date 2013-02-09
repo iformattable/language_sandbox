@@ -1,6 +1,7 @@
 #light
 
 let [|_;s|] = System.Environment.GetCommandLineArgs()
+
 let rna = seq { 
   for b in s do 
     if 'T' = b then 
