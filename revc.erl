@@ -1,10 +1,10 @@
 -module(revc).
 -export([reverse_complement/1]).
 
-comp(B) when B == $A -> $T;
-comp(B) when B == $T -> $A;
-comp(B) when B == $G -> $C;
-comp(B) when B == $C -> $G.
+comp($A) -> $T;
+comp($T) -> $A;
+comp($G) -> $C;
+comp($C) -> $G.
 
 reverse_complement(S) ->
   rev_c(S,[]).

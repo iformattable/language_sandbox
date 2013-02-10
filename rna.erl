@@ -6,7 +6,7 @@ transcode(Dna) ->
 
 transcode([],Rna) ->
   Rna;
-transcode([B|Dna],Rna) when B == $T ->
+transcode([$T|Dna],Rna) ->
   transcode(Dna, Rna ++ [$U]);
 transcode([B|Dna],Rna) ->
   transcode(Dna, Rna ++ [B]).
